@@ -1,0 +1,14 @@
+#cloud-config
+hostname: root
+ssh_pwauth: true
+disable_root: false
+users:
+  - name: root
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    password: $6$BjT66p6qO6fa34uT$Re5fkDgHvyaYhYhZitn6yKIWhUe0rMQOLz2jjYWzAtX3x.e3qHU/TEb3a6kTdVh8E4MyeaqqOgUyv3AR9UQn80
+chpasswd:
+  list: |
+    root:root
+    root:root
+  expire: false
